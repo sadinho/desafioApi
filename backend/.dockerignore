@@ -1,0 +1,4 @@
+scripts
+
+# notably deprecated source code after adonis -> express transition
+src/deprecated

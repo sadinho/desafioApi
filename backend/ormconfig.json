@@ -1,0 +1,20 @@
+{
+  "comment1": "Esse JSON aplica-se apenas para configurar a CLI do TypeORM",
+  "comment2": "Se não fosse por isso já teriamos removido ele do projeto",
+  "comment3": "Configure adequadamente o .env do projeto",
+
+  "entities": [
+    "src/model/**/*.ts"
+  ],
+  "migrations": [
+    "src/infra/migrations/**/*.ts"
+  ],
+  "cli": {
+    "migrationsDir": "src/infra/migrations",
+    "entitiesDir": "src/model"
+  },
+  "extra": {
+    "max": 2000,
+    "ssl": false
+  }
+}

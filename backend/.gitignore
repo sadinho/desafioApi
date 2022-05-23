@@ -1,0 +1,16 @@
+############################## Directories ##############################
+# Generated when the the project is compiled in production (yarn prod)
+dist
+# Generated when dependencies are downloaded
+node_modules
+
+################################# Files #################################
+package-lock.json
+launch.json
+yarn-error.log
+yarn.lock
+.env
+
+# VSCode & Webstorm history directories
+.history
+.idea

@@ -1,0 +1,39 @@
+
+$theme-colors: (
+  "primary": #004F9C,
+  "secondary": #504f4f,
+  "success": #45b649,
+  "danger": #F45757,
+  "warning": #ffd700,
+  "info": #00c9ff,
+  "white": #fff,
+);
+$theme-font: (
+  "Inter": "Inter, sans-serif",
+  "Roboto": "Roboto, sans-serif",
+  "Open Sans": "Open Sans, sans-serif",
+  "Lato": "Lato, sans-serif",
+  "Arial": "Arial, sans-serif",
+  "Georgia": "Georgia, serif",
+);
+$theme-font-size: (
+  "12px": 12px,
+  "14px": 14px,
+  "16px": 16px,
+  "18px": 18px,
+  "20px": 20px,
+  "22px": 22px,
+  "24px": 24px,
+  "26px": 26px,
+  "28px": 28px,
+  "30px": 30px,
+);
+$enable-gradients: true;
+
+// card
+//
+$card-cap-bg: #fff;
+
+
+// sidebar
+$cr-sidebar-width: 224px;
