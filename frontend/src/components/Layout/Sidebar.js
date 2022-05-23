@@ -1,9 +1,8 @@
-// import logo200Image from 'assets/img/logo/logo_200.png';
+import logo200Image from 'assets/img/logo/logo_200.jpeg';
 import SourceLink from 'components/SourceLink';
 import React from 'react';
 import {
-  MdExtension,
-  MdKeyboardArrowDown,
+  MdExtension
 } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import {
@@ -22,7 +21,7 @@ const sidebarBackground = {
 
 const navItems = [
   { to: '/', name: 'Produtos', exact: false, Icon: MdExtension },
-  { to: '/CategoryPage', name: 'Categorias', exact: false, Icon: MdKeyboardArrowDown },
+  { to: '/CategoryPage', name: 'Categorias', exact: false, Icon: MdExtension },
 ];
 
 const bem = bn.create('sidebar');
@@ -51,17 +50,14 @@ class Sidebar extends React.Component {
         <div className={bem.e('content')}>
           <Navbar>
             <SourceLink className="navbar-brand d-flex">
-              {/* <img
+              <img
+                style={{ borderRadius: '50%' }}
                 src={logo200Image}
-                width="40"
-                height="30"
+                width="150"
+                height="130"
                 className="pr-2"
                 alt=""
-              /> */}
-              <span className="text-dark">
-                Seu Logo
-                {/* <FaGithub /> */}
-              </span>
+              />
             </SourceLink>
           </Navbar>
           <Nav vertical>

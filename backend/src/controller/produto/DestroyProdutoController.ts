@@ -7,7 +7,6 @@ class DestroyProdutoController extends AncestralController {
       const id = await this.getIntParam(req, 'id');
       const result = await ProdutoRepository.deleteProduto(id!);
       const produtos = await ProdutoRepository.getProdutos();
-      console.log(result)
       this.success(res, produtos);
   }
 }

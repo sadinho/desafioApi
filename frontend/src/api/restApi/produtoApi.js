@@ -13,7 +13,6 @@ export const putProduto = async (produto) => {
 
 export const delProduto = async (id) => {
   const response = await api.delete(`${versionApi}/produto/${id}`);
-  console.log('aqui', response);
   return response;
 }
 
