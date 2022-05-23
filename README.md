@@ -4,22 +4,23 @@ Está aplicação consiste de duas camadas frontend e backend.
 
 Para executar deverá executar o backend e o frontend de maneira simultanea
 
-Porém pode se usar o backend como api apenas sem a necessidade do frontend.
+Porém pode se usar o backend como api apenas, sem a necessidade do frontend.
 
-O frontend é um client da api para testar e usar as operações da api.
+O frontend é um client da api, para testar as operações da api.
 
-cada camada tem suas estruções de uso em cada readme.me (frontend e backend), siga as instruções
+cada camada tem suas instruções de uso em cada readme.me (frontend e backend), siga as instruções
 
 ## Requisitos gerais
 Para executar em ambiente local é preciso ter previamente instalado:
 
 pode se obter nos links a seguir
-[Ambiente de downloads:](https://www.postgresql.org/download/)
 
-[node ](https://nodejs.org/en/blog/release/v14.15.1/)
+[Postgres:](https://www.postgresql.org/download/)
+
+[Node ](https://nodejs.org/en/blog/release/v14.15.1/)
 
 ## Pré-requisitos
-  essa aplicação execultou naa versão do node 14.15.1, mas fique a vontade em usar outras versões, mas para garantir a plena funcionalidade tente usar a versão citada.
+  essa aplicação execultou na versão do node 14.15.1, mas fique a vontade em usar outras versões, mas para garantir a plena funcionalidade tente usar a versão citada.
 
 ## Instalação frontend
 
@@ -96,7 +97,7 @@ Execute no terminal
   ou
   suaUrl para prod
 
-  acesso ao SCHEMA json prodtos
+  acesso ao SCHEMA json produtos
   para ambiente dev 
    [localhost:3333](http://localhost:3333/)/api/v1/produtos 
    ou
