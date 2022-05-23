@@ -247,6 +247,25 @@ const ProductsPage = () => {
     }
   ];
 
+  const exportJson = () => {
+    const data = produtos.map((produto) => {
+      return {
+        nomeProduto: produto.nomeProduto,
+        nomeCategoria: produto.nomeCategoria,
+      };
+    });
+    const file = new Blob([JSON.stringify(data)], { type: 'application/json' });
+    const fileURL = URL.createObjectURL(file);
+    const link = document.createElement('a');
+    link.href = fileURL;
+    link.setAttribute('download', 'produtos.json');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
+
   const modalProducts = () => {
     return (
       <Modal
@@ -302,6 +321,9 @@ const ProductsPage = () => {
       <Col md={3}>
         <Button color="primary" size="lg" block onClick={() => actionTypeModal('Cadastrar')}>
           Novo
+        </Button>
+        <Button color="primary" size="lg" block onClick={() => exportJson()}>
+          export json
         </Button>
       </Col>
       &nbsp;
