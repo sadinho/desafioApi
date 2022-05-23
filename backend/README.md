@@ -7,12 +7,12 @@ controles de transações e conexões, typeOrm, express, algumas estruturas de b
 O sistema de migrate irá criar a estrutura inicial do banco auomaticamente quando for iniciado a primeira vez.
 
 ## Pré-requisitos
-  essa aplicação sou a versão do node 14.15.1, mas fique a vontade em usar outras versões, mas para garantir a plena funcionalidade tente usar a versão citada.
+  essa aplicação execultou naa versão do node 14.15.1, mas fique a vontade em usar outras versões, mas para garantir a plena funcionalidade tente usar a versão citada.
 ## Instalação
 
   Crie um banco de dados no postgres;
 
-  Renomeie crie um arquivo .env use os dados do .env.exemple
+  Renomeie crie um arquivo .env use os dados do .env.exemple caso não exista
 
   No arquivo de variavel de ambiente (.env) coloque as credenciais do banco para acesso (obs: não precisa criar nenhuma tabela);
 
