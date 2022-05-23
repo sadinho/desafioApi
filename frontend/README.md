@@ -1,20 +1,17 @@
-# Api desafio Sade
+# Api desafio front
 
-É uma simples api escrito em typeScript, possui teste de api basico com jest, documentação api swagger,
-controles de transações e conexões, typeOrm, express, algumas estruturas de basicas em sql.
+Está é o front end para a api backend, feito em react, usa estruturas basicas e testes basicos de render de componentes
 
-
-O sistema de migrate irá criar a estrutura inicial do banco auomaticamente quando for iniciado a primeira vez.
 
 ## Pré-requisitos
   essa aplicação execultou naa versão do node 14.15.1, mas fique a vontade em usar outras versões, mas para garantir a plena funcionalidade tente usar a versão citada.
 ## Instalação
 
-  Crie um banco de dados no postgres;
+  1-clone o repositorio
 
+ Dentro da pasta frontend:
+  
   Renomeie crie um arquivo .env use os dados do .env.exemple caso não exista
-
-  No arquivo de variavel de ambiente (.env) coloque as credenciais do banco para acesso (obs: não precisa criar nenhuma tabela);
 
   Execute no terminal
   ```bash
@@ -31,11 +28,11 @@ O sistema de migrate irá criar a estrutura inicial do banco auomaticamente quan
   após a instalação dos pacotes 
   Execute no terminal para modo de desenvolvimento
   ```bash
-  yarn dev
+  yarn start
   ```
   ou 
   ```bash
-  npm run dev
+  npm run start
   ```
   ## Teste
   Execute no terminal
@@ -58,21 +55,33 @@ O sistema de migrate irá criar a estrutura inicial do banco auomaticamente quan
   ## Executar Build (produção)
   Execute no terminal
   ```bash
-  yarn prod
+  yarn serve
   ```
   ou 
   ```bash
-  npm run prod
+  npm run serve
   ```
-## Acesso a documentação api swagger
-  localhost:3333/api/v1/api-lib para dev
-  ou
-  suaUrl/api/v1/api-lib para prod
+## deploy
+Execute no terminal
+  ```bash
+  yarn deploy
+  ```
+  ou 
+  ```bash
+  npm run deploy
+  ```
 
-  acesso ao SCHEMA json swagger 
-   localhost:3333/api/v1/api-lib-json para dev 
+## Visualizando a aplicação
+  [localhost:3000](http://localhost:3000/) para ambiente dev
+  ou
+  suaUrl para prod
+
+  acesso ao SCHEMA json prodtos
+  para ambiente dev 
+   [localhost:3333](http://localhost:3333/)/api/v1/produtos 
    ou
-  suaUrl/api/v1/api-lib-json para prod
+   para prod
+  suaUrl/api/v1/produtos
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
