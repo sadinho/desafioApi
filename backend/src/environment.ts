@@ -21,24 +21,3 @@ export const POSTGRESQL_PASSWORD   = process.env.POSTGRESQL_PASSWORD;
 export const POSTGRESQL_DATABASE   = process.env.POSTGRESQL_DATABASE;
 export const POSTGRESQL_POOL_SIZE  = process.env.POSTGRESQL_POOL_SIZE;
 export const POSTGRESQL_SSL        = process.env.POSTGRESQL_SSL;
-
-/* ----------------------- ARMAZENAMENTO ---------------------- */
-export const FILES_AZURE_KEY       = process.env.FILES_AZURE_KEY;
-export const FILES_AZURE_SECRET    = process.env.FILES_AZURE_SECRET;
-export const FILES_AZURE_CONTAINER = process.env.FILES_AZURE_CONTAINER;
-
-/* -------------------------- E-MAIL -------------------------- */
-export const E_MAIL_PORT            = process.env.E_MAIL_PORT;
-export const E_MAIL_HOST            = process.env.E_MAIL_HOST;
-export const E_MAIL_USERNAME        = process.env.E_MAIL_USERNAME;
-export const E_MAIL_PASSWORD        = process.env.E_MAIL_PASSWORD;
-export const E_MAIL_CONNECTION      = process.env.E_MAIL_CONNECTION;
-export const E_MAIL_ADRESS          = process.env.E_MAIL_ADRESS;
-export const E_MAIL_MAX_CONNECTIONS = process.env.E_MAIL_MAX_CONNECTIONS
-export const E_MAIL_MAX_MESSAGES    = process.env.E_MAIL_MAX_MESSAGES;
-export const E_MAIL_RATE_LIMIT      = process.env.E_MAIL_RATE_LIMIT;
-
-/* ------------------------- JWT-AUTH ------------------------- */
-export const JWT_SECRET             = process.env.JWT_SECRET;
-export const TOKEN_EXPIRES_IN       = process.env.TOKEN_EXPIRES_IN;
-export const TOKEN_ORIGINACAO       = process.env.TOKEN_ORIGINACAO;
