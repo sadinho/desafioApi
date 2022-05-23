@@ -31,6 +31,7 @@ const CategoryPage = () => {
   const [persistType, setPersistType] = useState('');
   const [category, setCategory] = useState({});
   const [files, setFiles] = useState("");
+  const [abortion, setAbortion] = useState(false);
   const [alert, setAlert] = useState({
     open: false,
     type: '',
@@ -137,6 +138,7 @@ const CategoryPage = () => {
     } finally {
       setModal(false);
       setCategory({});
+      setAbortion(false);
     }
   };
 
@@ -154,7 +156,7 @@ const CategoryPage = () => {
       case 'Upload':
         uploadProdutcts();
         break;
-      
+
       default:
         break;
     }
@@ -217,19 +219,21 @@ const CategoryPage = () => {
   ];
 
   const handleChange = e => {
-    const allowedExtensions =/(\.json)$/i;
+    const allowedExtensions = /(\.json)$/i;
+    if (!allowedExtensions.exec(e.target.files[0].name)) {
+      setAlert({
+        open: true,
+        type: 'danger',
+        message: 'Extensão inválida!',
+      });
+      setAbortion(true);
+      return;
+    }
     const fileReader = new FileReader();
     fileReader.readAsText(e.target.files[0], "UTF-8");
-    fileReader.onload = e => {
-      if (!allowedExtensions.exec(fileReader)) {
-        setAlert({
-          open: true,
-          type: 'danger',
-          message: 'Extensão inválida!',
-        });
-      } else {
-        setFiles(fileReader.result);
-      } 
+    fileReader.onload = () => {
+      setFiles(fileReader.result);
+      setAbortion(false);
     };
   };
 
@@ -249,29 +253,45 @@ const CategoryPage = () => {
           {persistType !== 'Excluir' ? (
             <Col md={12}>
               <Row>
-                <small>Nome da categoria</small>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={category.nomeCategoria}
-                  onChange={(e) => setCategory({ ...category, nomeCategoria: e.target.value })}
-                />
+                <div><small>Nome da categoria:</small></div>
+                {persistType !== 'Upload' && (
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={category.nomeCategoria}
+                    onChange={(e) => setCategory({ ...category, nomeCategoria: e.target.value })}
+                  />
+                )}
 
-                <small>Importar produtos nessa categoria</small>
-                <input
-                  type="file"
-                  className="form-control"
-                  onChange={handleChange}
-                />
-                
+                {persistType === 'Upload' && (
+                  <>
+                    &nbsp;
+                    <div>{category.nomeCategoria}</div>
+                    &nbsp;
+                    <div>
+                      <small>Importar produtos nessa categoria</small>
+                      <input
+                        type="file"
+                        className="form-control"
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </>
+                )}
+
               </Row>
             </Col>
-          ) : category.nomeCategoria}
+          ) : <div>{category.nomeCategoria} </div>}
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={() => manipulateCategory()}>
-            {persistType}
-          </Button>{' '}
+          {!abortion && (
+            <>
+              <Button color="primary" onClick={() => manipulateCategory()}>
+                {persistType}
+              </Button>{' '}
+            </>
+          )}
+
           <Button color="secondary" onClick={() => toggle()}>
             Cancel
           </Button>
