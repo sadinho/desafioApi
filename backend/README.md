@@ -1,4 +1,4 @@
-# Api desafio Sade
+# Api desafio
 
 É uma simples api escrito em typeScript, possui teste de api basico com jest, documentação api swagger,
 controles de transações e conexões, typeOrm, express, algumas estruturas de basicas em sql.
